@@ -2,6 +2,7 @@ package SoftEng2Lab3;
 
 public class ClosedState implements AccountState
 {
+    Account account;
     public void activate(Account account)
     {
         System.out.println("You cannot activate a closed account!");
@@ -14,12 +15,12 @@ public class ClosedState implements AccountState
     {
         System.out.println("Account is already closed!");
     }
-    public void deposit(double amount, Account account)
+    public void deposit(double amount)
     {
         System.out.println("You cannot deposit on closed account!");
         account.toString();
     }
-    public void withdraw(double amount, Account account)
+    public void withdraw(double amount)
     {
         System.out.println("You cannot withdraw on a closed account!");
         account.toString();

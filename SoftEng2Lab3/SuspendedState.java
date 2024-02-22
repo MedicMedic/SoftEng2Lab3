@@ -15,11 +15,11 @@ public class SuspendedState implements AccountState
     {
         account.setState(new ClosedState());
     }
-    public void deposit(double amount, Account account)
+    public void deposit(double amount)
     {
         System.out.println("Account is already suspended!");
     }
-    public void withdraw(double amount, Account account)
+    public void withdraw(double amount)
     {
         System.out.println("Account is already suspended!");
     }

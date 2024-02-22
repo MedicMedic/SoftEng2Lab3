@@ -2,6 +2,7 @@ package SoftEng2Lab3;
 
 public class ActiveState implements AccountState
 {
+    Account account;
     public void activate(Account account)
     {
         System.out.println("Account is already actived!");
@@ -16,16 +17,14 @@ public class ActiveState implements AccountState
         account.setState(new ClosedState());
         System.out.println("Account is closed!");
     }
-    public void deposit(double amount, Account account)
+    public void deposit(double amount)
     {
-        account.setBalance(amount);
-        String text = account.toString();
-        System.out.println(text);
+        account.deposit(amount);
+        account.toString();
     }
-    public void withdraw(double amount, Account account)
+    public void withdraw(double amount)
     {
-        account.setBalance(amount);
-        String text = account.toString();
-        System.out.println(text);
+        account.withdraw(amount);
+        account.toString();
     }
 }

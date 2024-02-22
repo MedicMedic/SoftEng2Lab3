@@ -23,11 +23,6 @@ public class Account
         this.amount = amount;
     }
 
-    public void setBalance(double toAdd)
-    {
-        amount += toAdd;
-    }
-
     public String getAccountNumber() 
     {
         return accountNumber;
@@ -65,15 +60,17 @@ public class Account
 
     public void deposit(double amountToAdd)
     {
-        setBalance(amountToAdd);
+
     }
 
     public void withdraw(double amountToSub)
     {
-        setBalance(-(amountToSub));
+
     }
 
-    public String toString() {
-        return accountNumber + "'s current balance = " + amount;
+    public String toString() 
+    {
+        String output = accountNumber + "'s current balance = " + amount;
+        return output;
     }
 }
