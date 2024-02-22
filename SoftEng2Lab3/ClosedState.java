@@ -14,4 +14,12 @@ public class ClosedState implements AccountState
     {
         System.out.println("Account is already closed!");
     }
+    public void deposit(double amount, Account account)
+    {
+        System.out.println("Account is already closed!");
+    }
+    public void withdraw(double amount, Account account)
+    {
+        System.out.println("Account is already closed!");
+    }
 }

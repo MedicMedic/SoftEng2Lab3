@@ -4,14 +4,22 @@ public class ActiveState implements AccountState
 {
     public void activate(Account account)
     {
-        System.out.println("Account is already activated!");
+        System.out.println("Account is already active!");
     }
     public void suspend(Account account)
     {
-        Account.suspend(this);
+        account.setState(new SuspendedState());
     }
     public void close(Account account)
     {
-        Account.close(this);
+        account.setState(new ClosedState());
+    }
+    public void deposit(double amount, Account account)
+    {
+        account.setBalance(amount);
+    }
+    public void withdraw(double amount, Account account)
+    {
+        account.setBalance(amount);
     }
 }

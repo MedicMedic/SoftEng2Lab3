@@ -4,7 +4,7 @@ public class SuspendedState implements AccountState
 {
     public void activate(Account account)
     {
-        Account.activate(this);
+        account.setState(new ActiveState());
     }
     public void suspend(Account account)
     {
@@ -12,6 +12,14 @@ public class SuspendedState implements AccountState
     }
     public void close(Account account)
     {
-        Account.close(this);
+        account.setState(new ClosedState());
+    }
+    public void deposit(double amount, Account account)
+    {
+        System.out.println("Account is already suspended!");
+    }
+    public void withdraw(double amount, Account account)
+    {
+        System.out.println("Account is already suspended!");
     }
 }
