@@ -17,3 +17,8 @@ Implement the State pattern to improve code maintainability and flexibility:
     - Remove state-specific logic from the Account class.
     - Introduce a reference to the current AccountState object.
     - Delegate actions like deposit, withdraw, activate, suspend, and close to the current state object through its corresponding methods.
+   
+  # UML Diagram
+
+  ![Blank diagram](https://github.com/MedicMedic/SoftEng2Lab3/assets/142379309/8ddd3711-90db-4312-8dc7-6865fa855262)
+
