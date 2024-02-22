@@ -4,11 +4,11 @@ public class ClosedState implements AccountState
 {
     public void activate(Account account)
     {
-        System.out.println("Account is already closed!");
+        System.out.println("You cannot activate a closed account!");
     }
     public void suspend(Account account)
     {
-        System.out.println("Account is already closed!");
+        System.out.println(" You cannot suspend a closed account");
     }
     public void close(Account account)
     {
@@ -16,10 +16,12 @@ public class ClosedState implements AccountState
     }
     public void deposit(double amount, Account account)
     {
-        System.out.println("Account is already closed!");
+        System.out.println("You cannot deposit on closed account!");
+        account.toString();
     }
     public void withdraw(double amount, Account account)
     {
-        System.out.println("Account is already closed!");
+        System.out.println("You cannot withdraw on a closed account!");
+        account.toString();
     }
 }

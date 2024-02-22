@@ -5,6 +5,7 @@ public class SuspendedState implements AccountState
     public void activate(Account account)
     {
         account.setState(new ActiveState());
+        System.out.println("Account is activated!");
     }
     public void suspend(Account account)
     {
